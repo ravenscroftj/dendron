@@ -192,7 +192,7 @@ jobs:
         shell: bash
 
       - name: Export test-workspace
-        run: yarn run dendron exportPod --podId dendron.nextjs --config "dest=./packages/nextjs-template/" --wsRoot=`pwd`/test-workspace 
+        run: yarn run dendron exportPod --podId dendron.nextjs --config "dest=`pwd`/packages/nextjs-template/" --wsRoot=`pwd`/test-workspace 
 
       - name: Install Playwright dependencies
         run: npx playwright install --with-deps
